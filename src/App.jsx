@@ -348,10 +348,14 @@ export default function App() {
       </div>
 
       {/* CONTROLS */}
-      <div style={{padding:"8px 20px",borderTop:"1px solid #e2e8f0",display:"flex",alignItems:"center",justifyContent:"center",gap:10,background:"#fff",flexShrink:0}}>
+      <div style={{padding:"8px 20px",borderTop:"1px solid #e2e8f0",display:"flex",alignItems:"center",justifyContent:"center",gap:10,background:"#fff",flexShrink:0,position:"relative"}}>
         <button onClick={()=>setSi(0)} style={{padding:"6px 12px",borderRadius:6,border:"1px solid #e2e8f0",background:"#fff",color:"#64748b",fontSize:12,fontWeight:600,cursor:"pointer"}}>↺</button>
         <button onClick={()=>si>0&&setSi(si-1)} disabled={si===0} style={{padding:"6px 16px",borderRadius:6,border:"1px solid #e2e8f0",background:si===0?"#f8fafc":"#fff",color:si===0?"#cbd5e1":"#334155",fontSize:12,fontWeight:600,cursor:si===0?"default":"pointer"}}>←</button>
         <button onClick={()=>si<STEPS.length-1&&setSi(si+1)} disabled={si===STEPS.length-1} style={{padding:"6px 22px",borderRadius:6,border:"none",background:si===STEPS.length-1?"#e2e8f0":"linear-gradient(135deg,#6366f1,#8b5cf6)",color:si===STEPS.length-1?"#94a3b8":"#fff",fontSize:13,fontWeight:700,cursor:si===STEPS.length-1?"default":"pointer",boxShadow:si<STEPS.length-1?"0 2px 10px #6366f144":"none"}}>Далее →</button>
+        <a className="tg-link" href="https://t.me/defm" target="_blank" rel="noopener noreferrer" style={{position:"absolute",right:20,top:"50%",transform:"translateY(-50%)",fontSize:11,color:"#94a3b8",textDecoration:"none",display:"flex",alignItems:"center",gap:4,fontWeight:500}}>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.568 8.16l-1.858 8.764c-.14.621-.506.775-1.025.482l-2.832-2.088-1.366 1.315c-.151.151-.278.278-.571.278l.203-2.886 5.243-4.734c.228-.203-.05-.316-.352-.113l-6.477 4.08L5.674 12.57c-.621-.194-.633-.621.129-.919l9.932-3.83c.518-.194.972.113.833.339z"/></svg>
+          <span>@defm</span>
+        </a>
       </div>
 
       <style>{`
@@ -362,9 +366,14 @@ export default function App() {
         button:hover{filter:brightness(.96);}
         ::-webkit-scrollbar{width:3px;}
         ::-webkit-scrollbar-thumb{background:#d4d4d4;border-radius:2px;}
+        .tg-link:hover{color:#6366f1 !important;}
         @media (max-width: 700px){
           .main-row{flex-direction:column !important;}
           .right-col{flex:0 0 auto !important;width:100% !important;min-width:0 !important;max-height:45% !important;border-top:1px solid #e2e8f0;}
+          .tg-link span{display:none;}
+        }
+        @media (max-width: 480px){
+          .tg-link{display:none !important;}
         }
       `}</style>
     </div>
