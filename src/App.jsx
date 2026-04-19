@@ -205,11 +205,11 @@ export default function App() {
       </div>
 
       {/* MAIN */}
-      <div style={{flex:1,display:"flex",overflow:"hidden",minHeight:0,width:"100%",maxWidth:1200,margin:"0 auto"}}>
+      <div className="main-row" style={{flex:1,display:"flex",overflow:"hidden",minHeight:0}}>
 
         {/* CHAT */}
         <div style={{flex:1,display:"flex",flexDirection:"column",borderRight:"1px solid #e2e8f0",background:"#fff",minWidth:0}}>
-          <div style={{flex:1,overflowY:"auto",padding:"12px 18px",display:"flex",flexDirection:"column",gap:8}}>
+          <div style={{flex:1,overflowY:"auto",padding:"12px 18px",display:"flex",flexDirection:"column",gap:8,width:"100%",maxWidth:760,margin:"0 auto"}}>
             {si===0&&(
               <div style={{flex:1,display:"flex",alignItems:"center",justifyContent:"center",color:"#cbd5e1",fontSize:13}}>
                 Нажмите «Далее» →
@@ -253,7 +253,7 @@ export default function App() {
         </div>
 
         {/* RIGHT */}
-        <div style={{flex:"0 1 320px",minWidth:220,display:"flex",flexDirection:"column",background:"#fafbfc",overflow:"auto"}}>
+        <div className="right-col" style={{flex:"0 1 320px",minWidth:220,display:"flex",flexDirection:"column",background:"#fafbfc",overflow:"auto"}}>
 
           {/* Context */}
           <div style={{padding:"10px 12px 8px",borderBottom:"1px solid #e2e8f0"}}>
@@ -362,6 +362,10 @@ export default function App() {
         button:hover{filter:brightness(.96);}
         ::-webkit-scrollbar{width:3px;}
         ::-webkit-scrollbar-thumb{background:#d4d4d4;border-radius:2px;}
+        @media (max-width: 700px){
+          .main-row{flex-direction:column !important;}
+          .right-col{flex:0 0 auto !important;width:100% !important;min-width:0 !important;max-height:45% !important;border-top:1px solid #e2e8f0;}
+        }
       `}</style>
     </div>
   );
