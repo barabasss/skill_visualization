@@ -372,9 +372,6 @@ export default function App() {
           .right-col{flex:0 0 auto !important;width:100% !important;min-width:0 !important;max-height:45% !important;border-top:1px solid #e2e8f0;}
           .tg-link span{display:none;}
         }
-        @media (max-width: 480px){
-          .tg-link{display:none !important;}
-        }
       `}</style>
     </div>
   );
