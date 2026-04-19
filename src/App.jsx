@@ -205,7 +205,7 @@ export default function App() {
       </div>
 
       {/* MAIN */}
-      <div style={{flex:1,display:"flex",overflow:"hidden",minHeight:0}}>
+      <div style={{flex:1,display:"flex",overflow:"hidden",minHeight:0,width:"100%",maxWidth:1200,margin:"0 auto"}}>
 
         {/* CHAT */}
         <div style={{flex:1,display:"flex",flexDirection:"column",borderRight:"1px solid #e2e8f0",background:"#fff",minWidth:0}}>
