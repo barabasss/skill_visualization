@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import { Analytics } from "@vercel/analytics/react";
 
 const USER_MSG = "Сгенерируй release notes за последний спринт";
 
@@ -363,6 +364,7 @@ export default function App() {
         ::-webkit-scrollbar{width:3px;}
         ::-webkit-scrollbar-thumb{background:#d4d4d4;border-radius:2px;}
       `}</style>
+      <Analytics />
     </div>
   );
 }
