@@ -253,7 +253,7 @@ export default function App() {
         </div>
 
         {/* RIGHT */}
-        <div className="right-col" style={{flex:"0 1 320px",minWidth:220,display:"flex",flexDirection:"column",background:"#fafbfc",overflow:"auto"}}>
+        <div className="right-col" style={{flex:"0 1 440px",minWidth:220,display:"flex",flexDirection:"column",background:"#fafbfc",overflow:"auto"}}>
 
           {/* Context */}
           <div style={{padding:"10px 12px 8px",borderBottom:"1px solid #e2e8f0"}}>
