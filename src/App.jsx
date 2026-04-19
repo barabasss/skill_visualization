@@ -370,7 +370,6 @@ export default function App() {
         @media (max-width: 700px){
           .main-row{flex-direction:column !important;}
           .right-col{flex:0 0 auto !important;width:100% !important;min-width:0 !important;max-height:45% !important;border-top:1px solid #e2e8f0;}
-          .tg-link span{display:none;}
         }
       `}</style>
     </div>
